@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Data Order Disini"
+        android:textSize="20sp"
+        android:textColor="@color/blue2"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        />
+    <EditText
+        style="@style/edit_text"
+        android:id="@+id/input_id"
+        android:hint="ID Order"
+        />
+    <EditText
+        style="@style/edit_text"
+        android:id="@+id/input_idproduk"
+        android:hint="ID Product"/>
+    <EditText
+        style="@style/edit_text"
+        android:id="@+id/input_namacust"
+        android:hint="Nama Customer"/>
+    <EditText
+        style="@style/edit_text"
+        android:id="@+id/input_alamat"
+        android:hint="Alamat Customer"/>
+    <EditText
+        style="@style/edit_text"
+        android:id="@+id/input_jumlah"
+        android:hint="Jumlah Product"/>
+    <EditText
+        style="@style/edit_text"
+        android:id="@+id/input_total"
+        android:hint="Total Harga"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            style="@style/btn_Style"
+            android:id="@+id/btn_submitorder"
+            android:text="Submit"
+            android:onClick="addDataOrder"/>
+        <Button
+            android:id="@+id/btn_showorder"
+            style="@style/btn_Style"
+            android:text="Show All"
+
+            android:onClick="showAllOrder"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
