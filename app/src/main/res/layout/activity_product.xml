@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Input Product!!"
         android:textSize="20sp"
+        android:textColor="@color/blue2"
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:layout_margin="10dp"
@@ -21,29 +22,36 @@
     <EditText
         style="@style/edit_text"
         android:id="@+id/input_idp"
-        android:hint="ID Produk!!"
+        android:hint="ID Produk"
         />
     <EditText
         style="@style/edit_text"
         android:id="@+id/input_nama"
-        android:hint="Nama Produk!!"/>
+        android:hint="Nama Produk"/>
     <EditText
         style="@style/edit_text"
         android:id="@+id/input_harga"
-        android:hint="Harga!!"/>
+        android:hint="Harga"/>
     <EditText
         style="@style/edit_text"
         android:id="@+id/input_warna"
-        android:hint="Warna!!"/>
+        android:hint="Warna"/>
     <EditText
         style="@style/edit_text"
         android:id="@+id/input_stok"
-        android:hint="Stok!!"/>
+        android:inputType="number"
+        android:hint="Stok"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center">
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/btn_Style"
+            android:text="Back"
+            android:onClick="Back"
+            />
         <Button
             style="@style/btn_Style"
             android:id="@+id/btn_submit"
@@ -54,6 +62,7 @@
             style="@style/btn_Style"
             android:text="Show All"
             android:onClick="showAll"/>
+
 
     </LinearLayout>
 

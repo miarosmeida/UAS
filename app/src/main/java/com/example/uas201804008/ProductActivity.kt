@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 
 class ProductActivity : AppCompatActivity() {
@@ -23,6 +24,10 @@ class ProductActivity : AppCompatActivity() {
         inputStok = findViewById(R.id.input_stok)
         userDBHelper = DBHelperProduct(this)
     }
+   fun Back(v:View){
+       var kembali = Intent(this, MainActivity2::class.java)
+       startActivity(kembali)
+   }
     fun addData(v: View){
         var idpin = inputIdp.text.toString()
         var namain = inputNama.text.toString()

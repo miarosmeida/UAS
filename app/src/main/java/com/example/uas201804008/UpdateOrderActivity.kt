@@ -8,47 +8,51 @@ import android.widget.EditText
 
 class UpdateOrderActivity : AppCompatActivity() {
     lateinit var userDBHelper: DBHelper
-    lateinit var inputid: EditText
-    lateinit var inputidproduk: EditText
-    lateinit var inputnamacust: EditText
-    lateinit var inputalamat: EditText
-    lateinit var inputjumlah: EditText
-    lateinit var inputtotal: EditText
-    lateinit var idg: String
+    lateinit var inputidd: EditText
+    lateinit var inputidprodukk: EditText
+    lateinit var inputnamacustt: EditText
+    lateinit var inputalamatt: EditText
+    lateinit var inputjumlahh: EditText
+    lateinit var inputtotall: EditText
+    lateinit var idgg: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_order)
-        inputid = findViewById(R.id.input_idu)
-        inputidproduk = findViewById(R.id.input_idproduku)
-        inputnamacust = findViewById(R.id.input_namacustu)
-        inputalamat = findViewById(R.id.input_alamatu)
-        inputjumlah = findViewById(R.id.input_jumlahu)
-        inputtotal = findViewById(R.id.input_totalu)
+        inputidd = findViewById(R.id.input_idu)
+        inputidprodukk = findViewById(R.id.input_idproduku)
+        inputnamacustt = findViewById(R.id.input_namacustu)
+        inputalamatt = findViewById(R.id.input_alamatu)
+        inputjumlahh = findViewById(R.id.input_jumlahu)
+        inputtotall = findViewById(R.id.input_totalu)
         userDBHelper = DBHelper(this)
         val bundle =  intent.extras
         if (bundle != null){
-            idg = bundle.getString("idk").toString()
-            inputid.setText(bundle.getString("idk"))
-            inputidproduk.setText(bundle.getString("idprodukk"))
-            inputnamacust.setText(bundle.getString("namacustk"))
-            inputalamat.setText(bundle.getString("alamatk"))
-            inputjumlah.setText(bundle.getString("jumlahk"))
-            inputtotal.setText(bundle.getString("totalk"))
+            idgg = bundle.getString("idk").toString()
+            inputidd.setText(bundle.getString("idk"))
+            inputidprodukk.setText(bundle.getString("idprodukk"))
+            inputnamacustt.setText(bundle.getString("namacustk"))
+            inputalamatt.setText(bundle.getString("alamatk"))
+            inputjumlahh.setText(bundle.getString("jumlahk"))
+            inputtotall.setText(bundle.getString("totalk"))
         }
         userDBHelper = DBHelper(this)
+    }
+    fun Menuo(v: View){
+        val exit = Intent(this, MainActivity2::class.java)
+        startActivity(exit)
     }
     fun cancelDataOrder(vorder: View){
         val exit = Intent(this, RvDbOrderActivity::class.java)
         startActivity(exit)
     }
     fun updateDataOrder(vorder: View){
-        var idprodukin = inputidproduk.text.toString()
-        var namacustin = inputnamacust.text.toString()
-        var alamatin = inputalamat.text.toString()
-        var jumlahin = inputjumlah.text.toString()
-        var totalin = inputtotal.text.toString()
-        var idin = idg
-        userDBHelper.updateDataOrder(idin, idprodukin, namacustin, alamatin, jumlahin, totalin)
+        var idprodukinn = inputidprodukk.text.toString()
+        var namacustinn = inputnamacustt.text.toString()
+        var alamatinn = inputalamatt.text.toString()
+        var jumlahinn = inputjumlahh.text.toString()
+        var totalinn = inputtotall.text.toString()
+        var idinn = idgg
+        userDBHelper.updateDataOrder(idinn, idprodukinn, namacustinn, alamatinn, jumlahinn, totalinn)
         val exit = Intent(this, RvDbOrderActivity::class.java)
         startActivity(exit)
     }

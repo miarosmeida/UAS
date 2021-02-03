@@ -31,34 +31,40 @@
     <EditText
         style="@style/edit_text"
         android:id="@+id/input_namacust"
-        android:hint="Nama Customer"/>
+        android:hint="Nama Customer" />
     <EditText
         style="@style/edit_text"
         android:id="@+id/input_alamat"
-        android:hint="Alamat Customer"/>
+        android:hint="Alamat Customer" />
     <EditText
         style="@style/edit_text"
         android:id="@+id/input_jumlah"
-        android:hint="Jumlah Product"/>
+        android:hint="Jumlah Product"
+        android:inputType="number"/>
     <EditText
         style="@style/edit_text"
         android:id="@+id/input_total"
-        android:hint="Total Harga"/>
+        android:hint="Total Harga"
+        android:inputType="number"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center">
         <Button
+            android:id="@+id/btn_backo"
+            style="@style/btn_Style"
+            android:text="Back"
+            />
+        <Button
             style="@style/btn_Style"
             android:id="@+id/btn_submitorder"
-            android:text="Submit"
-            android:onClick="addDataOrder"/>
+            android:text="Submit"/>
+    <!--        android:onClick="addDataOrder"/>-->
         <Button
             android:id="@+id/btn_showorder"
             style="@style/btn_Style"
             android:text="Show All"
-
             android:onClick="showAllOrder"/>
 
     </LinearLayout>

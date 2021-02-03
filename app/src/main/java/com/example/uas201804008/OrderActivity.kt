@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 
 class OrderActivity : AppCompatActivity() {
@@ -24,24 +25,30 @@ class OrderActivity : AppCompatActivity() {
         inputjumlah = findViewById(R.id.input_jumlah)
         inputtotal = findViewById(R.id.input_total)
         orderDBHelper = DBHelper(this)
+        var btnBacko : Button = findViewById(R.id.btn_backo)
+        var btnSubmit :Button =findViewById(R.id.btn_submitorder)
+        btnBacko.setOnClickListener {
+            var kembali = Intent(this, MainActivity2::class.java)
+            startActivity(kembali)
+        }
+        btnSubmit.setOnClickListener {
+            var idin = inputid.text.toString()
+            var idprodukin = inputidproduk.text.toString()
+            var namacustin = inputnamacust.text.toString()
+            var alamatin = inputalamat.text.toString()
+            var jumlahin = inputjumlah.text.toString()
+            var totalin = inputtotal.text.toString()
+            orderDBHelper.insertDataOrder(idin, idprodukin, namacustin, alamatin, jumlahin, totalin)
+            inputid.setText("")
+            inputidproduk.setText("")
+            inputnamacust.setText("")
+            inputalamat.setText("")
+            inputjumlah.setText("")
+            inputtotal.setText("")
+        }
     }
-    fun addDataOrder(vorder: View){
-        var idin = inputid.text.toString()
-        var idprodukin = inputidproduk.text.toString()
-        var namacustin = inputnamacust.text.toString()
-        var alamatin = inputalamat.text.toString()
-        var jumlahin = inputjumlah.text.toString()
-        var totalin = inputtotal.text.toString()
-        orderDBHelper.insertData(idin, idprodukin, namacustin, alamatin, jumlahin, totalin)
-        inputid.setText("")
-        inputidproduk.setText("")
-        inputnamacust.setText("")
-        inputalamat.setText("")
-        inputjumlah.setText("")
-        inputtotal.setText("")
-    }
-    fun showAllOrder(vorder: View){
-//        var pindah = Intent(this, MainActivity2::class.java)
+
+    fun showAllOrder(v: View){
         var pindah = Intent(this, RvDbOrderActivity::class.java)
         startActivity(pindah)
     }

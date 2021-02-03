@@ -41,11 +41,11 @@ class DBAdapterProduct(private val listDataku: ArrayList<DBModelProduct>): Recyc
         holder.btnUpdate.setOnClickListener {
             val pindahUp = Intent(holder.itemView.context, UpdateActivity::class.java)
             val bundle = Bundle()
-            bundle.putString("idpkk", dataku.idp)
-            bundle.putString("namakk", dataku.nama)
-            bundle.putString("hargakk", dataku.harga)
-            bundle.putString("warnakk", dataku.warna)
-            bundle.putString("stokkk", dataku.stok)
+            bundle.putString("idpk", dataku.idp)
+            bundle.putString("namak", dataku.nama)
+            bundle.putString("hargak", dataku.harga)
+            bundle.putString("warnak", dataku.warna)
+            bundle.putString("stokk", dataku.stok)
             pindahUp.putExtras(bundle)
             holder.itemView.context.startActivity(pindahUp)
         }

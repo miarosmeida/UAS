@@ -11,9 +11,9 @@ class MainActivity : AppCompatActivity() {
     private val item = arrayOf(R.drawable.bajubiru, R.drawable.set, R.drawable.moka,
         R.drawable.white, R.drawable.coksu, R.drawable.bfashion, R.drawable.bajuhtm,
         R.drawable.celana, R.drawable.bajunavy)
-    private val nama = arrayOf("Emikowa - Daily outer", "Stelan Scuba ", "Baju Santai", "Classy - Rajut", "Classy - Rajut",
+    private val nama = arrayOf("Emikowa - Daily outer", "Stelan Scuba ", "Classy - Rajut", "Classy - Rajut", "Classy - Rajut",
         "Classy - Rajut", "vSamantha - Stelan Piyama", "Celana Scuba", "vSamantha - Stelan Tie Dye")
-    private val harga = arrayOf("Harga : Rp. 99.999-,", "Harga : Rp. 250.000-,", "Harga : Rp. 189.999-,", "Harga : Rp. 89.999-,", "Harga : Rp. 89.999-,",
+    private val harga = arrayOf("Harga : Rp. 99.999-,", "Harga : Rp. 250.000-,", "Harga : Rp. 89.999-,", "Harga : Rp. 89.999-,", "Harga : Rp. 89.999-,",
         "Harga : Rp. 89.999-,", "Harga : Rp. 180.099-,", "Harga : Rp. 150.999-,","Harga : Rp. 180.999-,"
     )
     private val stok = arrayOf(

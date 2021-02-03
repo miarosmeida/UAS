@@ -3,6 +3,7 @@ package com.example.uas201804008
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import android.widget.EditText
 
@@ -25,26 +26,30 @@ class UpdateActivity : AppCompatActivity() {
         userDBHelper = DBHelperProduct(this)
         val bundle =  intent.extras
         if (bundle != null){
-            idpg = bundle.getString("idpkk").toString()
-            inputIdp.setText(bundle.getString("idpkk"))
-            inputNama.setText(bundle.getString("namakk"))
-            inputHarga.setText(bundle.getString("hargakk"))
-            inputWarna.setText(bundle.getString("warnakk"))
-            inputStok.setText(bundle.getString("stokkk"))
+            idpg = bundle.getString("idpk").toString()
+            inputIdp.setText(bundle.getString("idpk"))
+            inputNama.setText(bundle.getString("namak"))
+            inputHarga.setText(bundle.getString("hargak"))
+            inputWarna.setText(bundle.getString("warnak"))
+            inputStok.setText(bundle.getString("stokk"))
         }
         userDBHelper = DBHelperProduct(this)
+    }
+    fun Menu(v: View){
+        val exit = Intent(this, MainActivity2::class.java)
+        startActivity(exit)
     }
     fun cancelData(v: View){
         val exit = Intent(this, RvDbProductActivity::class.java)
         startActivity(exit)
     }
     fun updateData(v: View){
-        var namain = inputNama.text.toString()
-        var hargain = inputHarga.text.toString()
-        var warnain = inputWarna.text.toString()
-        var stokin = inputStok.text.toString()
-        var idpin = idpg
-        userDBHelper.updateData(namain, hargain, warnain, stokin, idpin)
+        var namainn = inputNama.text.toString()
+        var hargainn = inputHarga.text.toString()
+        var warnainn = inputWarna.text.toString()
+        var stokinn = inputStok.text.toString()
+        var idpinn = idpg
+        userDBHelper.updateData(idpinn, namainn, hargainn, warnainn, stokinn)
         val exit = Intent(this, RvDbProductActivity::class.java)
         startActivity(exit)
     }

@@ -6,26 +6,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/white">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="5dp"
             android:id="@+id/tv_idpku"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="5dp"
             android:id="@+id/tv_namaku"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="5dp"
             android:id="@+id/tv_hargaku"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="5dp"
             android:id="@+id/tv_warnaku"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:layout_marginLeft="5dp"
+            android:inputType="number"
             android:id="@+id/tv_stokku"/>
 
         <LinearLayout
@@ -36,12 +48,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Delete"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
                 android:id="@+id/btndelete"
                 android:padding="4dp"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UPDATE"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
                 android:id="@+id/btnupdate"
                 android:padding="4dp"/>
         </LinearLayout>

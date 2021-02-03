@@ -18,8 +18,7 @@ object DBInfo {
 
     class OrderInput : BaseColumns {
         companion object {
-
-            val TABLE_NAME = "order"
+            val TABLE_NAME = "orderb"
             val COL_ID = "idp"
             val COL_IDPROD = "idproduk"
             val COL_NAMA = "namacust"

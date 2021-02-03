@@ -42,7 +42,6 @@ class DBHelperProduct (context: Context): SQLiteOpenHelper(context, DATABASE_NAM
         return true
     }
     fun fullData():ArrayList<DBModelProduct>{
-        //      val users = ArrayList<DBModel>()
         val product = arrayListOf<DBModelProduct>()
         val db = writableDatabase
         var cursor: Cursor? = null
@@ -79,17 +78,17 @@ class DBHelperProduct (context: Context): SQLiteOpenHelper(context, DATABASE_NAM
         val sql = "DELETE FROM " +namatablet+ " WHERE " +idpt+"='"+idpin+"'"
         db.execSQL(sql)
     }
-    fun updateData(idpinn: String, namainn: String, hargainn: String, warnainn: String, stokinn: String) {
+    fun updateData(idpin: String, namain: String, hargain: String, warnain: String, stokin: String) {
         val db = writableDatabase
         val namatablet = DBInfoProduct.UserInput.TABLE_NAME
-        val idptt = DBInfoProduct.UserInput.COL_IDP
-        val namatt = DBInfoProduct.UserInput.COL_NAMA
-        val hargatt = DBInfoProduct.UserInput.COL_HARGA
-        val warnatt = DBInfoProduct.UserInput.COL_WARNA
-        val stoktt = DBInfoProduct.UserInput.COL_STOK
+        val idpt = DBInfoProduct.UserInput.COL_IDP
+        val namat = DBInfoProduct.UserInput.COL_NAMA
+        val hargat = DBInfoProduct.UserInput.COL_HARGA
+        val warnat = DBInfoProduct.UserInput.COL_WARNA
+        val stokt = DBInfoProduct.UserInput.COL_STOK
         var sql = "UPDATE "+ namatablet + " SET "+
-                namatt+"='"+namainn+"', "+hargatt+"='"+hargainn+"', "+warnatt+"='"+warnainn+"', "+stoktt+"='"+stokinn+"' "+
-                "WHERE "+idptt+"='"+idpinn+"'"
+                namat+"='"+namain+"', "+hargat+"='"+hargain+"', "+warnat+"='"+warnain+"', "+stokt+"='"+stokin+"' "+
+                "WHERE "+idpt+"='"+idpin+"'"
         db.execSQL(sql)
 
     }
